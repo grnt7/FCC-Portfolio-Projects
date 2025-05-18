@@ -5,7 +5,6 @@ body{
 }
 
 
-
 #navbar {
   background-color: #be3144;
   position: fixed;
@@ -53,6 +52,30 @@ a {
   background: transparent;
   color: white;
   font-size: 1.5em;
+  padding: 0.5rem; /* Add some padding around the icon */
+}
+
+/* Style the hamburger icon (optional, but improves visibility) */
+#navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Style the icon when the menu is active (optional) */
+#navbar-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+#navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#navbar-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 
 /* Hide toggle on larger screens */
@@ -60,7 +83,6 @@ a {
   #navbar-toggle {
     display: none;
   }
-}
   #nav-list {
     display: flex;
     flex-direction: row;
@@ -68,6 +90,7 @@ a {
     position: static;
     background-color: transparent;
   }
+}
 li{
 list-style:none;
 }

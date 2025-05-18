@@ -22,15 +22,28 @@
 <body>
  <header >
   <nav id="navbar">
-    <ul id="nav-list">
-       <button id="navbar-toggle" aria-label="Toggle navigation">☰</button>
-  <li> <a href="#welcome-section" alt="">About</a></li>
-  <li> <a href="#projects" alt="">Work</a></li>
-  <li> <a href="#contact" alt="">Contact</a></li>
-  <li><a id="profile-link" href="#Profile"target="_blank">Profile</a>
-  </li>
+  
+  <button id="navbar-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-list">
+    <li><a href="#welcome-section">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  </nav>
+</nav>
+
+<script>
+  const toggleButton = document.getElementById('navbar-toggle');
+  const navList = document.getElementById('nav-list');
+
+  toggleButton.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    toggleButton.classList.toggle('active'); // Add active class to the button for icon animation
+  });
+</script>
 <section id="welcome-section" class="welcome-section">
   <h1>Hey I am David</h1>
   <p>A Front-End Web Developer</p>
@@ -89,14 +102,7 @@
   </footer>
   </section>
   
-  <script>
-  const toggleButton = document.getElementById('navbar-toggle');
-  const navList = document.getElementById('nav-list');
-
-  toggleButton.addEventListener('click', () => {
-    navList.classList.toggle('active');
-  });
-</script>
+  
   
   <script>
   function openImage(imageUrl) {
