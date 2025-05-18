@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF">
+<link rel="stylesheet" href="styles.css">
+<img src="" alt="Full Image" id="full-image">
+  <script>
+    const imageView = document.getElementById('full-image');
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageUrl = urlParams.get('url');
+    if (imageUrl) {
+      imageView.src = imageUrl;
+    } else {
+      imageView.alt = 'Image URL not provided.';
+    }
+  </script>
+
+<script src="https://kit.fontawesome.com/7ae5aa33c3.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio Webpage</title>
+  </head>
+<body>
+ <header >
+  <nav id="navbar">
+    <ul id="nav-list">
+  <li> <a href="#welcome-section" alt="">About</a></li>
+  <li> <a href="#projects" alt="">Work</a></li>
+  <li> <a href="#contact" alt="">Contact</a></li>
+  <li><a id="profile-link" href="#Profile"target="_blank">Profile</a>
+  </li>
+  </ul>
+  </nav>
+<section id="welcome-section" class="welcome-section">
+  <h1>Hey I am David</h1>
+  <p>A Front-End Web Developer</p>
+</section>
+<section id="projects" class="projects">
+<h2>These are some of my projects</h2>
+<div class="projects-grid">
+   <a href="images/ScreenshotCSSFLEXBOXCATSGALLERY_.jpeg" onclick="openVideo('videos/Flexbox PhotoGallery.mp4'); return false;">
+    <img src="images/ScreenshotCSSFLEXBOXCATSGALLERY_.jpeg"
+ alt="Tribute Page" class="project-img"  target="_blank"/>
+    <p class="project-tile">Cats Gallery CSS Flexbox</p>
+    
+  </a>
+  <a href="images/CSS Grid Magazine.png"  onclick="openImage(this.href); return false;"> 
+    <img src="images/CSSgrid MagazineReducedscale 2.jpg" 
+ alt="Tribute Page" class="project-img"  target="_blank" />
+    <p class="project-tile">Magazine Page CSS Grid</p></a>
+    <a href="images/Camper Cafe Menu.png" onclick="openImage(this.href); return false;"> 
+    <img src="images/Camper Cafe Menu.png"
+ alt="Tribute Page" class="project-img"  target="_blank"/>
+    <p class="project-tile">Cafe Menu</p></a>  
+  <a href="images/screenshot-SurveyForm.jpg" onclick="openVideo('videos/SurveyForm.mp4'); return false;"> 
+    <img src="images/screenshot-SurveyForm.jpg"
+ alt="Tribute Page" class="project-img"  target="_blank"/>
+    <p class="project-tile">Survey Form</p></a>
+  <a href="videos/FerrisWheelAnimation.mp4" target="_blank">
+  <video class="project-video" controls poster="images/Ferris Wheel.jpeg">
+    <source src="videos/FerrisWheelAnimation.mp4" type="video/mp4">
+   
+  </video>
+  <p class="project-tile">Ferris Wheel Animation</p>
+</a>
+    <a href="images/CityskylineNight.jpeg"  onclick="openVideo('videos/CityskylineDay2Night.mp4'); return false;"> 
+    <img src="images/CityskylineNight.jpeg"
+ alt="Tribute Page" class="project-img"  target="_blank"/>
+    <p class="project-tile">City Skyline CSS Variables</p></a>    
+</div>
+</section>
+<section id="contact" class="contact">
+  <div id="contact-header">
+    <h2>Let's work together...</h2>
+    <p id="contact-p">How do you take your coffee?</p>
+  </div>
+  <div id="contact-links"> 
+<a href=""><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+<a href=""><i class="fa-brands fa-twitter"></i>Twitter</a>
+<a href=""><i class="fa-brands fa-github"id="profile-link"target="_blank"></i> GitHub</a>
+<a href="mailto:dgrant00@btinternet.com"><i class="fa-solid fa-at "></i> Email</a>
+<a href=""><i class="fa-solid fa-mobile-screen-button"> </i> Call me!</a>
+  </div>
+</section>
+<section>
+  <footer>
+    <p>Created with Freecodecodecamp</p>
+    <p>2025</p>
+  </footer>
+  </section>
+  <script>
+  function openImage(imageUrl) {
+    window.open(imageUrl, '_blank');
+  }
+</script>
+<script>
+  function openVideo(videoUrl) {
+    window.open(videoUrl, '_blank');
+  }
+</script>
+</body>
+</html>
