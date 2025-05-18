@@ -6,21 +6,68 @@ body{
 
 
 
-#navbar{
- background-color: #be3144;
-position: fixed;
-top:0;
-left:0; 
-width: 100%;
-display: flex;
-justify-content: flex-end;
-z-index: 10;
-
+#navbar {
+  background-color: #be3144;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Space out logo/title and the toggle */
+  align-items: center; /* Vertically align items */
+  padding: 0 1rem; /* Add some padding on the sides */
+  z-index: 10;
 }
- #nav-list{
-display:flex;
-flex-direction: row;
- } 
+
+#nav-list {
+  display: none; /* Hide by default on mobile */
+  flex-direction: column;
+  width: 100%;
+  background-color: #be3144; /* Ensure background for the dropdown */
+  position: absolute;
+  top: 60px; /* Adjust based on navbar height */
+  left: 0;
+}
+
+#nav-list.active { /* Class to show the menu */
+  display: flex;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 1rem 2rem;
+  display: block; /* Make links take full width of the list item */
+}
+
+#navbar-toggle {
+  display: block; /* Show on mobile */
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.5em;
+}
+
+/* Hide toggle on larger screens */
+@media (min-width: 801px) {
+  #navbar-toggle {
+    display: none;
+  }
+}
+  #nav-list {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    position: static;
+    background-color: transparent;
+  }
 li{
 list-style:none;
 }

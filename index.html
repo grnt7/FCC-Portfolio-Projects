@@ -23,6 +23,7 @@
  <header >
   <nav id="navbar">
     <ul id="nav-list">
+       <button id="navbar-toggle" aria-label="Toggle navigation">☰</button>
   <li> <a href="#welcome-section" alt="">About</a></li>
   <li> <a href="#projects" alt="">Work</a></li>
   <li> <a href="#contact" alt="">Contact</a></li>
@@ -87,6 +88,16 @@
     <p>2025</p>
   </footer>
   </section>
+  
+  <script>
+  const toggleButton = document.getElementById('navbar-toggle');
+  const navList = document.getElementById('nav-list');
+
+  toggleButton.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
+  
   <script>
   function openImage(imageUrl) {
     window.open(imageUrl, '_blank');
